@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <syslog.h>
 #include <fcntl.h>
@@ -75,7 +74,7 @@ int process() {
     while (1) {
         ret = vc_dispmanx_snapshot(display, screen_resource, 0);
         vc_dispmanx_resource_read_data(screen_resource, &rect1, fbp, vinfo.xres * vinfo.bits_per_pixel / 8);
-        usleep(25 * 1000);
+        usleep(10 * 1000);
     }
 
     munmap(fbp, finfo.smem_len);
